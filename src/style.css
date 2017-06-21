@@ -1,0 +1,5 @@
+$main: #ff0000;
+
+.root {
+  color: $main;
+}
