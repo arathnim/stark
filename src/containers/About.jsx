@@ -8,7 +8,8 @@ import {
 class About extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {meta: []};
+    this.state = {data: "foo"};
+    fetch("about.json").then(x => x.json()).then(x => {this.setState({data: x})})
 }
 
   render() {
@@ -23,6 +24,9 @@ class About extends React.Component {
           </Link>
         </div>
         <div className={styles.content}>
+          <hr />
+          <div className={styles.container} dangerouslySetInnerHTML={{ __html: this.state.data.content }} />
+          <hr />
         </div>
       </div>
     );

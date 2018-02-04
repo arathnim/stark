@@ -19,7 +19,7 @@ renderedPosts.forEach((path) => fs.unlinkSync('./public/blog/'+path));
 
 var posts = fs.readdirSync('./posts/');
 var content = posts.map(
-  (path) => [path, handlePost(fs.readFileSync('./posts/' + path, 'utf8'))]
+  (path) => [path.slice(0, (path.length - 3)), handlePost(fs.readFileSync('./posts/' + path, 'utf8'))]
 );
 
 content.forEach(
@@ -45,5 +45,9 @@ console.log("Blog metadata written");
 // resume
 
 var resume = handlePost(fs.readFileSync('./resume.md', 'utf8'))
-fs.unlinkSync('./public/resume.json')
 fs.writeFileSync('./public/resume.json', JSON.stringify(resume))
+
+// about
+
+var about = handlePost(fs.readFileSync('./about.md', 'utf8'))
+fs.writeFileSync('./public/about.json', JSON.stringify(about))
