@@ -12,12 +12,14 @@ import Projects from './containers/Projects'
 import Resume from './containers/Resume'
 import About from './containers/About'
 import Contact from './containers/Contact'
+import Post from './containers/Post'
 
 const Init = () =>
   <Router>
     <div>
       <Route exact path="/" component={Home} />
       <Route exact path="/blog" component={Blog} />
+      <Route exact path="/blog/:path" component={Post} />
       <Route exact path="/projects" component={Projects} />
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/about" component={About} />
