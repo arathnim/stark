@@ -6,8 +6,6 @@ import {
   Link
 } from 'react-router-dom'
 
-import meta from '../../public/blog-meta.json'
-
 const Home = () =>
   <div className={styles.home}>
       <div className={styles.homebuttonspacer}><span className={styles.homebutton}>~</span></div>

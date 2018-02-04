@@ -34,7 +34,7 @@ var metadata = content.map(
     "path": path,
     "title": o.data.title,
     "date": o.data.date,
-    "preview": $(o.content).first('p').text(),
+    "preview": $(o.content).first('p').html(),
   })
 );
 

@@ -3,7 +3,7 @@ title: "The Usage of Moral Categories in Academic Philosophy"
 date: "November 5th, 2017"
 ---
 
-A long time ago, something called morality entered into human consiousness,
+A *long* time ago, something called morality entered into human consiousness,
 presumably, beaten into our long-dead ancestors to enforce rules formerly backed only in violence.
 It occupies a layer between our emotional reactions to certain decisions,
 and our actual ability to make decisions.
