@@ -5,14 +5,18 @@ import {
   Route,
 } from 'react-router-dom'
 
-import './style.css'
-import Root from './containers/Root'
+import './style.sass'
+import Home from './containers/Home'
+import Blog from './containers/Blog'
 
 const Init = () =>
   <Router>
     <div>
-      <Route exact path="/" component={Root} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/blog" component={Blog} />
     </div>
   </Router>
+
+document.title = "Home"
 
 render(<Init />, document.getElementById('main'))

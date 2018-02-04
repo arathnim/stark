@@ -14,12 +14,12 @@ const babelOpts = {
 }
 
 const cssOpts = {
-  test: /\.css$/,
+  test: /\.sass$/,
   exclude: /node_modules/,
   use: ExtractTextPlugin.extract({
     use: [
       'css-loader?modules',
-      'postcss-loader',
+      'sass-loader',
     ],
   }),
 }

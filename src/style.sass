@@ -1,0 +1,110 @@
+$background: #ffffff
+$text: #3e3e3e
+$em-color: #303030
+$accent: #67a6a6
+$fade: rgba(56, 56, 56, 0.5)
+
+$font: 'Source Sans Pro'
+
+.home
+  display: inline-block
+  background-size: cover
+  text-align: center
+  padding: 5% 20%
+  width: 60%
+  color: $em-color
+  @media (max-width: 1000px)
+    padding: 7.5% 12.5%
+    width: 75%
+
+.home a
+  color: $em-color
+  text-decoration: none
+  font-size: 3em
+  font-weight: 700
+
+.homespacer
+  margin-bottom: 5vh
+
+.homebuttonspacer
+  margin-bottom: 6vh
+  margin-top: 2vh
+
+.homebutton
+  color: white
+  background-color: $text
+  text-align: center
+  padding-left: 14px
+  padding-right: 13px
+  font-size: 1.8em
+  font-weight: 700
+  border-radius: 50%
+
+.header
+  display: inline-block
+  text-align: center
+  padding: 5% 20% 0% 20%
+  width: 60%
+  @media (max-width: 1000px)
+    padding: 7.5% 12.5%
+    width: 75%
+
+hr
+  border: 0
+  border-top: 1px solid rgba(0,0,0,0.1)
+  border-bottom: 1px solid #fff
+  margin: 2em 0
+  width: 60%
+  @media (max-width: 1000px)
+    width: 85%
+
+.content
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-content: center
+  align-items: center
+
+.postteaser
+  width: 60%
+  @media (max-width: 1000px)
+    width: 85%
+
+.date
+  color: $fade
+  letter-spacing: 0.1em
+  text-transform: uppercase
+  font-size: 0.9em
+
+.project-description
+  color: $fade
+  letter-spacing: 0.06em
+  text-transform: uppercase
+  font-size: 0.9em
+
+.title
+  font-weight: 700
+  font-size: 2.5em
+  line-height: 1.1
+  margin-top: 0px
+  margin-bottom: 10px
+
+body
+  color: $text
+  font-family: $font
+  font-size: 1.25em
+  word-wrap: break-word
+
+p
+  line-height: 1.5
+  margin-bottom: 1em
+
+a
+  color: $accent
+  text-decoration: none
+
+h1
+  font-size: 2.5em
+  font-weight: 700
+  color: $em-color
