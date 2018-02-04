@@ -18,3 +18,5 @@ class Post extends React.Component {
     );
   }
 }
+
+export Post
