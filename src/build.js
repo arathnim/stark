@@ -41,3 +41,9 @@ var metadata = content.map(
 fs.writeFileSync('./public/blog-meta.json', JSON.stringify(metadata));
 
 console.log("Blog metadata written");
+
+// resume
+
+var resume = handlePost(fs.readFileSync('./resume.md', 'utf8'))
+fs.unlinkSync('./public/resume.json')
+fs.writeFileSync('./public/resume.json', JSON.stringify(resume))
