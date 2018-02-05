@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import PostTeaser from './PostTeaser'
+import Header from './Header'
 
 class Blog extends React.Component {
   constructor(props) {
@@ -15,14 +16,9 @@ class Blog extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
-        <div className={styles.header}>
-          <Link to="/">
-            <div className={styles.homebuttonspacer}><span className={styles.homebutton}>~</span></div>
-          </Link>
-        </div>
+        <Header />
         <div className={styles.content}>
           <hr />
           {this.state.meta.map(x => <PostTeaser post={x} />)

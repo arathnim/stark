@@ -5,6 +5,8 @@ import {
   Link
 } from 'react-router-dom'
 
+import Header from './Header'
+
 class Projects extends React.Component {
   constructor(props) {
     super(props);
@@ -12,16 +14,9 @@ class Projects extends React.Component {
 }
 
   render() {
-    console.log(this.state)
     return (
       <div>
-        <div className={styles.header}>
-          <Link to="/">
-            <div className={styles.homebuttonspacer}>
-              <span className={styles.homebutton}>~</span>
-            </div>
-          </Link>
-        </div>
+        <Header />
         <div className={styles.content}>
         </div>
       </div>
