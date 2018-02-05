@@ -45,7 +45,7 @@ class Init extends React.Component {
           />
 
           <AnimatedRoute exact path="/blog" component={Blog}
-            atEnter={{ offset: this.state.currentpage == "#/nav" ? -100 : -100 }}
+            atEnter={{ offset: this.state.lastpage    == "#/nav" ? 100 : -100 }}
             atLeave={{ offset: this.state.currentpage == "#/nav" ? 100 : -100 }}
             atActive={{ offset: 0 }}
             mapStyles={(styles) => ({
