@@ -18,84 +18,100 @@ import Nav from './containers/Nav'
 
 import history from './history'
 
-const Init = () =>
-  <Router history={history}>
-    <div>
+class Init extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {currentpage: 'foo', lastpage: 'bar'};
+    history.listen((location, action) => {
+      this.setState({lastpage: this.state.currentpage})
+      this.setState({currentpage: location.hash})
+    })
+  }
 
-      <AnimatedRoute exact path="/" component={Home}
-        atEnter={{ offset: -100 }}
-        atLeave={{ offset: -100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+  render() {
+    console.log(`currentpage: ${this.state.currentpage}`)
+    console.log(`lastpage: ${this.state.lastpage}`)
+    return (
+      <Router history={history}>
+        <div>
 
-      <AnimatedRoute exact path="/blog" component={Blog}
-        atEnter={{ offset: 100 }}
-        atLeave={{ offset: 100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/" component={Home}
+            atEnter={{ offset: -100 }}
+            atLeave={{ offset: -100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-      <AnimatedRoute exact path="/blog/:path" component={Post}
-        atEnter={{ offset: 100 }}
-        atLeave={{ offset: 100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/blog" component={Blog}
+            atEnter={{ offset: this.state.currentpage == "#/nav" ? -100 : -100 }}
+            atLeave={{ offset: this.state.currentpage == "#/nav" ? 100 : -100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-      <AnimatedRoute exact path="/projects" component={Projects}
-        atEnter={{ offset: 100 }}
-        atLeave={{ offset: 100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/blog/:path" component={Post}
+            atEnter={{ offset: 100 }}
+            atLeave={{ offset: 100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-      <AnimatedRoute exact path="/resume" component={Resume}
-        atEnter={{ offset: 100 }}
-        atLeave={{ offset: 100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/projects" component={Projects}
+            atEnter={{ offset: 100 }}
+            atLeave={{ offset: 100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-      <AnimatedRoute exact path="/about" component={About}
-        atEnter={{ offset: 100 }}
-        atLeave={{ offset: 100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/resume" component={Resume}
+            atEnter={{ offset: 100 }}
+            atLeave={{ offset: 100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-      <AnimatedRoute exact path="/contact" component={Contact}
-        atEnter={{ offset: 100 }}
-        atLeave={{ offset: 100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/about" component={About}
+            atEnter={{ offset: 100 }}
+            atLeave={{ offset: 100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-      <AnimatedRoute exact path="/nav" component={Nav}
-        atEnter={{ offset: -100 }}
-        atLeave={{ offset: -100 }}
-        atActive={{ offset: 0 }}
-        mapStyles={(styles) => ({
-          left: `${styles.offset}%`,
-        })}
-      />
+          <AnimatedRoute exact path="/contact" component={Contact}
+            atEnter={{ offset: 100 }}
+            atLeave={{ offset: 100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
 
-    </div>
-  </Router>
+          <AnimatedRoute exact path="/nav" component={Nav}
+            atEnter={{ offset: -100 }}
+            atLeave={{ offset: -100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
+
+        </div>
+      </Router>
+    );
+  }
+}
 
 document.title = "Home"
 

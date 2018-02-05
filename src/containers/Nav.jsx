@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 
 import BackHeader from './BackHeader'
+import history from '../history'
 
 const Nav = () =>
   <div className={styles.nav}>

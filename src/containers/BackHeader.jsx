@@ -20,7 +20,7 @@ class FakeHeader extends React.Component {
                    onClick={history.goBack}>
                 <p className={styles.homebuttontext}>X</p>
               </div>
-
+            
         </div>
     );
   }
