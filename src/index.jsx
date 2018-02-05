@@ -30,9 +30,8 @@ const Init = () =>
         atEnter={{ offset: -100 }}
         atLeave={{ offset: -100 }}
         atActive={{ offset: 0 }}
-        className="nav"
         mapStyles={(styles) => ({
-          transform: `translateX(${styles.offset}%)`,
+          left: `${styles.offset}%`,
         })}
       />
     </div>
