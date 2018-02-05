@@ -5,6 +5,8 @@ import {
   Link
 } from 'react-router-dom'
 
+import Header from './Header'
+
 class Post extends React.Component {
   constructor(props) {
     super(props);
@@ -15,13 +17,7 @@ class Post extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.header}>
-          <Link to="/">
-            <div className={styles.homebuttonspacer}>
-              <span className={styles.homebutton}>~</span>
-            </div>
-          </Link>
-        </div>
+        <Header />
         <div className={styles.content}>
           <hr />
           <div className={styles.container}>

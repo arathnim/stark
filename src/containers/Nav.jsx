@@ -8,8 +8,8 @@ import {
 
 import FakeHeader from './FakeHeader'
 
-const Home = () =>
-  <div className={styles.home}>
+const Nav = () =>
+  <div className={styles.nav}>
       <FakeHeader />
       <div className={styles.content}>
         <div className={styles.title}><Link to="/blog">Blog</Link></div>
@@ -20,4 +20,4 @@ const Home = () =>
       </div>
   </div>
 
-export default Home
+export default Nav

@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
-class Header extends React.Component {
+class FakeHeader extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,14 +13,12 @@ class Header extends React.Component {
   render() {
     return (
         <div className={styles.header}>
-          <Link to="/nav">
             <div className={styles.homebutton}>
               <p className={styles.homebuttontext}>~</p>
             </div>
-          </Link>
         </div>
     );
   }
 }
 
-export default Header
+export default FakeHeader

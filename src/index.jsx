@@ -4,6 +4,7 @@ import {
   HashRouter as Router,
   Route,
 } from 'react-router-dom'
+import { AnimatedRoute } from 'react-router-transition'
 
 import './style.sass'
 import Home from './containers/Home'
@@ -13,6 +14,7 @@ import Resume from './containers/Resume'
 import About from './containers/About'
 import Contact from './containers/Contact'
 import Post from './containers/Post'
+import Nav from './containers/Nav'
 
 const Init = () =>
   <Router>
@@ -24,6 +26,15 @@ const Init = () =>
       <Route exact path="/resume" component={Resume} />
       <Route exact path="/about" component={About} />
       <Route exact path="/contact" component={Contact} />
+      <AnimatedRoute exact path="/nav" component={Nav}
+        atEnter={{ offset: -100 }}
+        atLeave={{ offset: -100 }}
+        atActive={{ offset: 0 }}
+        className="nav"
+        mapStyles={(styles) => ({
+          transform: `translateX(${styles.offset}%)`,
+        })}
+      />
     </div>
   </Router>
 
