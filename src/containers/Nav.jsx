@@ -6,11 +6,11 @@ import {
   Link
 } from 'react-router-dom'
 
-import FakeHeader from './FakeHeader'
+import BackHeader from './BackHeader'
 
 const Nav = () =>
   <div className={styles.nav}>
-      <FakeHeader />
+      <BackHeader />
       <div className={styles.content}>
         <div className={styles.title}><Link to="/blog">Blog</Link></div>
         <div className={styles.title}><Link to="/projects">Projects</Link></div>

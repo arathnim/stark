@@ -16,7 +16,7 @@ class Resume extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.screen}>
         <Header />
         <div className={styles.content}>
           <hr />

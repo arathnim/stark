@@ -15,7 +15,7 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.screen}>
         <Header />
         <div className={styles.content}>
         </div>

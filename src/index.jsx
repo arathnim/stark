@@ -16,16 +16,75 @@ import Contact from './containers/Contact'
 import Post from './containers/Post'
 import Nav from './containers/Nav'
 
+import history from './history'
+
 const Init = () =>
-  <Router>
+  <Router history={history}>
     <div>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/blog" component={Blog} />
-      <Route exact path="/blog/:path" component={Post} />
-      <Route exact path="/projects" component={Projects} />
-      <Route exact path="/resume" component={Resume} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/contact" component={Contact} />
+
+      <AnimatedRoute exact path="/" component={Home}
+        atEnter={{ offset: -100 }}
+        atLeave={{ offset: -100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
+      <AnimatedRoute exact path="/blog" component={Blog}
+        atEnter={{ offset: 100 }}
+        atLeave={{ offset: 100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
+      <AnimatedRoute exact path="/blog/:path" component={Post}
+        atEnter={{ offset: 100 }}
+        atLeave={{ offset: 100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
+      <AnimatedRoute exact path="/projects" component={Projects}
+        atEnter={{ offset: 100 }}
+        atLeave={{ offset: 100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
+      <AnimatedRoute exact path="/resume" component={Resume}
+        atEnter={{ offset: 100 }}
+        atLeave={{ offset: 100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
+      <AnimatedRoute exact path="/about" component={About}
+        atEnter={{ offset: 100 }}
+        atLeave={{ offset: 100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
+      <AnimatedRoute exact path="/contact" component={Contact}
+        atEnter={{ offset: 100 }}
+        atLeave={{ offset: 100 }}
+        atActive={{ offset: 0 }}
+        mapStyles={(styles) => ({
+          left: `${styles.offset}%`,
+        })}
+      />
+
       <AnimatedRoute exact path="/nav" component={Nav}
         atEnter={{ offset: -100 }}
         atLeave={{ offset: -100 }}
@@ -34,6 +93,7 @@ const Init = () =>
           left: `${styles.offset}%`,
         })}
       />
+
     </div>
   </Router>
 
