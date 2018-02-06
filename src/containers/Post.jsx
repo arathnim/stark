@@ -16,9 +16,8 @@ class Post extends React.Component {
   }
 
   render() {
+    document.title = this.state.data == "foo" ? "" : this.state.data.data.title;
     return (
-      <div className={styles.screen}>
-        <Header />
         <div className={styles.content}>
           <hr />
           <div className={styles.container}>
@@ -28,8 +27,6 @@ class Post extends React.Component {
           <div className={styles.container} dangerouslySetInnerHTML={{ __html: this.state.data.content }} />
           <hr />
         </div>
-
-      </div>
     );
   }
 }

@@ -13,7 +13,7 @@ const babelOpts = {
   ],
 }
 
-const cssOpts = {
+const SassOpts = {
   test: /\.sass$/,
   exclude: /node_modules/,
   use: ExtractTextPlugin.extract({
@@ -22,6 +22,12 @@ const cssOpts = {
       'sass-loader',
     ],
   }),
+}
+
+const cssOpts = {
+  test: /\.css$/,
+  loader: 'style-loader!css-loader',
+  include: /flexboxgrid/
 }
 
 const pluginList = [
@@ -61,6 +67,7 @@ module.exports = {
   module: {
     rules: [
       babelOpts,
+      SassOpts,
       cssOpts,
     ],
   },

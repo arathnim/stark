@@ -14,7 +14,7 @@ class PostTeaser extends React.Component {
     return (
 
         <div className={styles.postteaser}>
-          <Link to={"blog/"+this.props.post.path}>
+          <Link to={"/blog/"+this.props.post.path}>
             <div className={styles.title}>{this.props.post.title}</div>
           </Link>
           <div className={styles.date}>{this.props.post.date}</div>

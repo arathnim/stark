@@ -79,10 +79,3 @@ var resume = handlePost(fs.readFileSync('./resume.md', 'utf8'))
 fs.writeFileSync('./public/resume.json', JSON.stringify(resume))
 
 console.log("Resume markdown written");
-
-// about
-
-var about = handlePost(fs.readFileSync('./about.md', 'utf8'))
-fs.writeFileSync('./public/about.json', JSON.stringify(about))
-
-console.log("About metadata written");

@@ -16,15 +16,14 @@ class Blog extends React.Component {
   }
 
   render() {
+    document.title = "Blog"
     return (
-      <div className={styles.screen}>
-        <Header />
-        <div className={styles.content}>
+      <div className={styles.content}>
           <hr />
-          {this.state.meta.map(x => <PostTeaser post={x} />)
-                          .reduce((acc, x) => acc === null ? [x] : [acc, <hr />, x], null)}
+          {this.state.meta
+            .map(x => <PostTeaser post={x} />)
+            .reduce((acc, x) => acc === null ? [x] : [acc, <hr />, x], null)}
           <hr />
-        </div>
       </div>
     );
   }

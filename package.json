@@ -5,13 +5,14 @@
   "author": "Dylan Ball <arathnim@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
-    "start": "nodemon -w webpack.config.babel.js -w .babelrc -x 'webpack-dev-server --no-progress'",
+    "start": "nodemon -w webpack.config.babel.js -w .babelrc -w public -x 'webpack-dev-server --no-progress'",
     "build": "node src/build.js && NODE_ENV=production webpack --no-progress -p"
   },
   "dependencies": {
     "normalize.css": "^6.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-flexbox-grid": "^2.0.0",
     "react-fontawesome": "^1.6.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.1.1",
@@ -37,6 +38,7 @@
     "node-sass": "^4.7.2",
     "nodemon": "^1.11.0",
     "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   }

@@ -17,17 +17,13 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div className={styles.screen}>
-        <Header />
-        <div className={styles.content}>
+      <div className={styles.content}>
           <hr />
           <div className={styles.container}>
             <div className={styles.title}>{this.state.data == "foo" ? "" : this.state.data.data.title}</div>
           </div>
           <div className={styles.container} dangerouslySetInnerHTML={{ __html: this.state.data.content }} />
           <hr />
-        </div>
-
       </div>
     );
   }
