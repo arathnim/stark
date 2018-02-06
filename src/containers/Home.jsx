@@ -9,7 +9,7 @@ import {
 import FakeHeader from './FakeHeader'
 
 const Home = () =>
-  <div className={styles.nav}>
+  <div className={styles.home}>
       <FakeHeader />
       <div className={styles.content}>
         <div className={styles.title}><Link to="/blog">Blog</Link></div>

@@ -15,6 +15,7 @@ import About from './containers/About'
 import Contact from './containers/Contact'
 import Post from './containers/Post'
 import Nav from './containers/Nav'
+import Project from './containers/Project'
 
 import history from './history'
 
@@ -61,6 +62,15 @@ class Init extends React.Component {
           />
 
           <AnimatedRoute exact path="/projects" component={Projects}
+            atEnter={{ offset: this.state.lastpage    == "#/nav" || this.state.lastpage    == "#/" ? 100 : -100 }}
+            atLeave={{ offset: this.state.currentpage == "#/nav" || this.state.currentpage == "#/" ? 100 : -100 }}
+            atActive={{ offset: 0 }}
+            mapStyles={(styles) => ({
+              left: `${styles.offset}%`,
+            })}
+          />
+
+          <AnimatedRoute exact path="/projects/:path" component={Project}
             atEnter={{ offset: 100 }}
             atLeave={{ offset: 100 }}
             atActive={{ offset: 0 }}
