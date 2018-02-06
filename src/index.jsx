@@ -29,8 +29,6 @@ class Init extends React.Component {
   }
 
   render() {
-    console.log(`currentpage: ${this.state.currentpage}`)
-    console.log(`lastpage: ${this.state.lastpage}`)
     return (
       <Router history={history}>
         <div>

@@ -5,6 +5,8 @@ import {
   Link
 } from 'react-router-dom'
 
+import FontAwesome from 'react-fontawesome'
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class Header extends React.Component {
         <div className={styles.header}>
           <Link to="/nav">
             <div className={styles.homebutton}>
-              <p className={styles.homebuttontext}>~</p>
+              <FontAwesome name='bars' style={{ 'font-size': '0.6em' }} />
             </div>
           </Link>
         </div>

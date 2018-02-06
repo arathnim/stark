@@ -7,6 +7,8 @@ import {
 
 import history from '../history'
 
+import FontAwesome from 'react-fontawesome'
+
 class FakeHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -18,9 +20,9 @@ class FakeHeader extends React.Component {
 
               <div className={styles.homebutton}
                    onClick={history.goBack}>
-                <p className={styles.homebuttontext}>X</p>
+                <FontAwesome name='times' style={{ 'font-size': '0.6em' }} />
               </div>
-            
+
         </div>
     );
   }
