@@ -25,18 +25,27 @@ class Header extends React.Component {
           <Row>
 
             <Col xs>
-              <div className={styles.navrow} onClick={history.goBack}>
-                  <FontAwesome name='bars' style={{ padding: '8% 0%', color: '#fff', 'font-size': '3.0em', 'vertical-align': '-60%' }}/>
-              </div>
+              <Link to="/blog/">
+                <div className={styles.navrow}>
+                  <p className={styles.mobilenav}>Blog</p>
+                </div>
+              </Link>
             </Col>
 
             <Col xs>
+              <Link to="/projects/">
+                <div className={styles.navrow}>
+                  <p className={styles.mobilenav}>Projects</p>
+                </div>
+              </Link>
             </Col>
 
             <Col xs>
-            </Col>
-
-            <Col xs>
+              <Link to="/resume/">
+                <div className={styles.navrow}>
+                  <p className={styles.mobilenav}>Resume</p>
+                </div>
+              </Link>
             </Col>
 
           </Row>
