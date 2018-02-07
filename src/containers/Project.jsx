@@ -20,6 +20,7 @@ class Project extends React.Component {
       <div className={styles.screen}>
         <div className={styles.content}>
           <hr />
+          <hr />
           <div className={styles.container}>
             <div className={styles.title}>{this.state.data == "foo" ? "" : this.state.data.data.title}</div>
           </div>

@@ -20,6 +20,7 @@ class Blog extends React.Component {
       <div className={styles.screen}>
         <div className={styles.content}>
           <hr />
+          <hr />
           {this.state.meta.map(x => <PostTeaser post={x} />)
                           .reduce((acc, x) => acc === null ? [x] : [acc, <hr />, x], null)}
           <hr />
