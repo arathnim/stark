@@ -18,34 +18,6 @@ $font: 'Source Sans Pro'
   margin: 0
   padding: 0
 
-.nav
-  background-color: $em-color
-  color: #fff
-  height: 100vh
-  width: 100vw
-  overflow-y: auto
-  position: absolute
-  top: 0px
-  left: inherit
-
-.home
-  height: 100vh
-  width: 100vw
-  overflow-y: auto
-  position: absolute
-  top: 0px
-  left: inherit
-
-.home .content .title
-  font-size: 3.5em
-  margin-bottom: 0.8em
-  color: $em-color
-  @media (max-width: 1000px)
-    font-size: 5.4em
-
-.home .header
-  padding: 4% 20% 3% 20%
-
 .screen
   height: 100vh
   width: 100vw
@@ -54,57 +26,29 @@ $font: 'Source Sans Pro'
   top: 0px
   left: inherit
 
-.nav .content .title
-  font-size: 3.5em
-  margin-bottom: 0.8em
-  color: #fff !important
-  @media (max-width: 1000px)
-    font-size: 5.4em
-
-.nav .header .homebutton
-  color: $em-color
-  background-color: #fff
-
-.nav .header
-  padding: 4% 20% 3% 20%
-
 .header
-  display: flex
-  align-items: center
-  justify-content: center
+  position: fixed
+  top: 0px
+  left: 0px
   text-align: center
-  padding: 4% 20% 2% 20%
-  width: 60%
-  @media (max-width: 1000px)
-    padding: 6% 12.5% 6% 12.5% !important
-    width: 75%
+  padding: 1% 0% 1% 0%
+  background-color: #222
+  width: 100%
+  z-index: 999
 
-.homebutton
-  display: flex
-  align-items: center
-  justify-content: center
-  color: white
-  background-color: $em-color
-  text-align: center
-  width: 50px
-  height: 50px
-  font-size: 1.8em
-  font-weight: 700
-  border-radius: 50%
-  @media (max-width: 1000px)
-    width: 75px
-    height: 75px
-    font-size: 3.0em
+.navitem
+  color: #fff
+  margin: 0
+  font-weight: 500
+  font-size: 0.9em
 
-.homebuttontext
-  margin-bottom: 0px
-  margin-top: 0px
-  vertical-align: 50
-  line-height: 1px
+.navrow
+    width: 100%
+    height: 100%
 
 hr
   border: 0
-  border-top: 1px solid rgba(0,0,0,0.1)
+  //border-top: 1px solid rgba(0,0,0,0.1)
   border-bottom: 1px solid #fff
   margin: 2em 0
   width: 60%
@@ -192,6 +136,9 @@ h1
 .content h1
   margin-top: 1em
   margin-bottom: 1em
+
+.content p a
+  color: #436693
 
 pre
   margin: 0px 0px 2em

@@ -18,8 +18,8 @@ class Project extends React.Component {
   render() {
     return (
       <div className={styles.screen}>
-        <Header />
         <div className={styles.content}>
+          <hr />
           <hr />
           <div className={styles.container}>
             <div className={styles.title}>{this.state.data == "foo" ? "" : this.state.data.data.title}</div>

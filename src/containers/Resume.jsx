@@ -17,8 +17,8 @@ class Resume extends React.Component {
   render() {
     return (
       <div className={styles.screen}>
-        <Header />
         <div className={styles.content}>
+          <hr />
           <hr />
           <div className={styles.container} dangerouslySetInnerHTML={{ __html: this.state.data.content }} />
           <hr />

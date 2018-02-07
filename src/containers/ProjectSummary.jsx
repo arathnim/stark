@@ -14,7 +14,7 @@ class ProjectSummary extends React.Component {
     return (
 
         <div className={styles.container}>
-          <Link to={"projects/"+this.props.post.path}>
+          <Link to={"/projects/"+this.props.post.path}>
             <div className={styles.title}>{this.props.post.title}</div>
           </Link>
           <div className={styles.projectdescription}>{this.props.post.summary}</div>
