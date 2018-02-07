@@ -38,12 +38,12 @@ class Init extends React.Component {
   }
 
   render() {
+    window.scrollTo(0, 0)
     return (
       <Router history={history}>
-        <div>
+        <div style={{position: 'relative'}}>
           <Header />
-          <div className={styles.headspace} />
-          <div>
+
           <AnimatedSwitch
             atEnter={{ offset: 100, opacity: 0 }}
             atLeave={{ offset: -100, opacity: 0}}
@@ -67,7 +67,6 @@ class Init extends React.Component {
 
           </AnimatedSwitch>
 
-        </div>
         </div>
       </Router>
     );

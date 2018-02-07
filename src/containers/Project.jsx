@@ -19,6 +19,7 @@ class Project extends React.Component {
     return (
       <div className={styles.content}>
           <hr />
+          <hr />
           <div className={styles.container}>
             <div className={styles.title}>{this.state.data == "foo" ? "" : this.state.data.data.title}</div>
           </div>
