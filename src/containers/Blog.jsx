@@ -18,7 +18,6 @@ class Blog extends React.Component {
   render() {
     return (
       <div className={styles.screen}>
-        <Header />
         <div className={styles.content}>
           <hr />
           {this.state.meta.map(x => <PostTeaser post={x} />)

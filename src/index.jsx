@@ -15,13 +15,14 @@ import Projects from './containers/Projects'
 import Resume from './containers/Resume'
 import Post from './containers/Post'
 import Project from './containers/Project'
+import Header from './containers/Header'
 
 import history from './history'
 
 class Init extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {currentpage: 'foo', lastpage: 'bar'};
+    this.state = {currentpage: '#/', lastpage: '#/'};
     history.listen((location, action) => {
       this.setState({lastpage: this.state.currentpage})
       this.setState({currentpage: location.hash})
@@ -32,7 +33,7 @@ class Init extends React.Component {
     return (
       <Router history={history}>
         <div>
-
+          <Header />
           <AnimatedSwitch
             atEnter={{ offset: 100, opacity: 0 }}
             atLeave={{ offset: -100, opacity: 0}}
