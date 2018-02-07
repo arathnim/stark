@@ -11,12 +11,38 @@ import FontAwesome from 'react-fontawesome'
 
 import history from '../history'
 
+var isMobile = 'ontouchstart' in window;
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+    if (isMobile){
+      return(
+        <div className={styles.header}>
+          <Row>
+
+            <Col xs>
+              <div className={styles.navrow} onClick={history.goBack}>
+                  <FontAwesome name='bars' style={{ padding: '8% 0%', color: '#fff', 'font-size': '3.0em', 'vertical-align': '-60%' }}/>
+              </div>
+            </Col>
+
+            <Col xs>
+            </Col>
+
+            <Col xs>
+            </Col>
+
+            <Col xs>
+            </Col>
+
+          </Row>
+        </div>
+      );
+    }
     return (
         <div className={styles.header}>
           <Row>

@@ -15,6 +15,7 @@ class Resume extends React.Component {
 }
 
   render() {
+    document.title = "Resume";
     return (
       <div className={styles.screen}>
         <div className={styles.content}>

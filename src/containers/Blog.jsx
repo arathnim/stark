@@ -16,6 +16,7 @@ class Blog extends React.Component {
   }
 
   render() {
+    document.title = "Blog";
     return (
       <div className={styles.screen}>
         <div className={styles.content}>

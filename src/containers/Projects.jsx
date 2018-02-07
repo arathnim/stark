@@ -17,6 +17,7 @@ class Projects extends React.Component {
   }
 
   render() {
+    document.title = "Projects";
     return (
       <div className={styles.screen}>
         <div className={styles.content}>

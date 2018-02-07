@@ -16,6 +16,7 @@ class Post extends React.Component {
   }
 
   render() {
+    document.title = this.state.data == "foo" ? "" : this.state.data.data.title;
     return (
       <div className={styles.screen}>
         <div className={styles.content}>

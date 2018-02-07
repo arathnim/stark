@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import {
   HashRouter as Router,
   Redirect,
+  Switch,
   Route,
 } from 'react-router-dom'
 
@@ -19,6 +20,7 @@ import Header from './containers/Header'
 
 import history from './history'
 
+var isMobile = 'ontouchstart' in window;
 
 function order(p) {
   if (p == "#/blog/") {
@@ -66,6 +68,31 @@ class Init extends React.Component {
   }
 
   render() {
+    if (isMobile) {
+      return (
+        <Router history={history}>
+          <div>
+            <Header />
+            <Switch>
+
+            <Route exact path="/blog" component={Blog} />
+
+            <Route exact path="/blog/:path" component={Post} />
+
+            <Route exact path="/projects" component={Projects} />
+
+            <Route exact path="/projects/:path" component={Project} />
+
+            <Route exact path="/resume" component={Resume} />
+
+            <Redirect exact from="/" to="/blog" />
+
+            </Switch>
+
+          </div>
+        </Router>
+      );
+    }
     return (
       <Router history={history}>
         <div>
