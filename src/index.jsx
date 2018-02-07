@@ -19,10 +19,46 @@ import Header from './containers/Header'
 
 import history from './history'
 
+
+function order(p) {
+  if (p == "#/blog/") {
+    return 1;
+  }
+  if (p.startsWith("#/blog/")) {
+    return 2;
+  }
+  if (p == "#/projects/") {
+    return 3;
+  }
+  if (p.startsWith("#/projects/")) {
+    return 4;
+  }
+  if (p == "#/resume/") {
+    return 5;
+  }
+  return 0;
+}
+
+function calcEnterOffset(c, l) {
+  if (order(c) < order(l)) {
+    return -100;
+  } else {
+    return  100;
+  }
+}
+
+function calcExitOffset(c, l) {
+  if (order(c) > order(l)) {
+    return -100;
+  } else {
+    return  100;
+  }
+}
+
 class Init extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {currentpage: '#/', lastpage: '#/'};
+    this.state = {currentpage: '#/blog/', lastpage: '#/blog/'};
     history.listen((location, action) => {
       this.setState({lastpage: this.state.currentpage})
       this.setState({currentpage: location.hash})
@@ -35,8 +71,8 @@ class Init extends React.Component {
         <div>
           <Header />
           <AnimatedSwitch
-            atEnter={{ offset: 100, opacity: 0 }}
-            atLeave={{ offset: -100, opacity: 0}}
+            atEnter={{ offset: calcEnterOffset(this.state.currentpage, this.state.lastpage), opacity: 0 }}
+            atLeave={{ offset: calcExitOffset(this.state.currentpage, this.state.lastpage), opacity: 0}}
             atActive={{ offset: 0, opacity: 1 }}
             mapStyles={(styles) => ({
               transform: `translateX(${styles.offset}%)`,

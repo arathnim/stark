@@ -23,25 +23,31 @@ class Header extends React.Component {
 
             <Col xs>
               <div className={styles.navrow} onClick={history.goBack}>
-                  <FontAwesome name='arrow-left' style={{ color: '#fff', 'font-size': '0.7em' }}/>
+                  <FontAwesome name='arrow-left' style={{ color: '#fff', 'font-size': '0.7em', 'vertical-align': '-60%' }}/>
               </div>
             </Col>
 
             <Col xs>
               <Link to="/blog/">
-                <p className={styles.navitem}>Blog</p>
+                <div className={styles.navrow}>
+                  <p className={styles.navitem}>Blog</p>
+                </div>
               </Link>
             </Col>
 
             <Col xs>
               <Link to="/projects/">
-                <p className={styles.navitem}>Projects</p>
+                <div className={styles.navrow}>
+                  <p className={styles.navitem}>Projects</p>
+                </div>
               </Link>
             </Col>
 
             <Col xs>
               <Link to="/resume/">
-                <p className={styles.navitem}>Resume</p>
+                <div className={styles.navrow}>
+                  <p className={styles.navitem}>Resume</p>
+                </div>
               </Link>
             </Col>
 

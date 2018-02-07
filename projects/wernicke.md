@@ -14,7 +14,7 @@ manipulated with normal code, and uses CL's macros to create clean, powerful int
 See the examples page for more neat things Wernicke can do, or the tutorials page to get started making a simple
 regex-like parsing language in Wernicke.
 
-## Installation
+#### Installation
 
 ```
 (ql:quickload 'wernicke)
