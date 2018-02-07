@@ -9,6 +9,8 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import FontAwesome from 'react-fontawesome'
 
+import history from '../history'
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -20,9 +22,9 @@ class Header extends React.Component {
           <Row>
 
             <Col xs>
-            <Link to="/blog/">
-                <FontAwesome name='arrow-left' style={{ color: '#fff', 'font-size': '0.7em' }}/>
-            </Link>
+              <div className={styles.navrow} onClick={history.goBack}>
+                  <FontAwesome name='arrow-left' style={{ color: '#fff', 'font-size': '0.7em' }}/>
+              </div>
             </Col>
 
             <Col xs>
